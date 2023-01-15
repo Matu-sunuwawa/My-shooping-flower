@@ -1,0 +1,144 @@
+:root{
+    --pink: rgba(232, 67, 147, 1);
+    --blur: rgba(4, 9 ,30, 0.7);
+    --white: rgba(255, 255, 255, 0.8);
+    --black: rgba(0, 0, 0, 1);
+}
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;border: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+.navbar{
+    background-image: linear-gradient(var(--blur),var(--blur)),url(images/home-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+}
+.navbar .nav{
+    background-color: var(--white);
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+}
+.navbar .nav a{
+    text-decoration: none;
+    color: var(--black);
+}
+.navbar .nav #logo{
+    position: relative;
+    right: 450px;
+    font-size: 30px;
+}
+.navbar .title{
+    padding-top: 300px;
+    padding-left: 20px;
+}
+.navbar .title button{
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+.navbar .title button:hover{
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.product{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.product .title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.product .container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.product .column{
+    /* border: 1px solid red; */
+    /* width: 32%; */
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 var(--blur);
+    border-radius: 5px;
+}
+.product .column2{
+    position: relative;
+    /* left: 20px; */
+    /* border: 1px solid red; */
+}
+.product .notes{
+    position: relative;
+    /* left: 20px; */
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    /* border: 1px solid red; */
+}
+/* .product .column .column2{
+    border: 1px solid red;
+} */
+.product .notes .update{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.product .column .column2 .overlay{
+    position: absolute;
+    bottom: 0;left: 0;right: 0;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.product .column:hover .column2 .overlay{
+    height: 35px;
+    transition: 0.5s ease;
+}
+.product .column .overlay a{
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--pink);
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    transition: 0.5s ease;
+}
+/* WoW.....WoW........   float is Passover! */
+.product .column2 img{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 380px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+.product .column:hover img{
+    transform: scale(1.02);
+    transition: 0.5s ease;
+}
+.product .column .overlay a:hover{
+    background-color: gray;
+    color: var(--pink);
+    transition: 0.5s ease;
+    font-weight: 600;
+}
+.product .column .column2 .percent{
+    position: relative;
+    bottom: 360px;
+    left: 20px;
+    font-size: 20px;
+}
